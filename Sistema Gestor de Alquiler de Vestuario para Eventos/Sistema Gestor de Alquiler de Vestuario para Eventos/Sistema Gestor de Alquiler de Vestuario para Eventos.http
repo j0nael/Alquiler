@@ -1,0 +1,6 @@
+@Sistema_Gestor_de_Alquiler_de_Vestuario_para_Eventos_HostAddress = http://localhost:5124
+
+GET {{Sistema_Gestor_de_Alquiler_de_Vestuario_para_Eventos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

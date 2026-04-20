@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema Gestor de Alquiler de Vestuario para Eventos", "Sistema Gestor de Alquiler de Vestuario para Eventos\Sistema Gestor de Alquiler de Vestuario para Eventos.csproj", "{7849EFBC-37E7-42E7-B946-811F02C869D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorVestuario.Application", "GestorVestuario.Application\GestorVestuario.Application.csproj", "{BE58F736-FD19-4F4A-8CEE-0C8BE75DA730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorVestuario.Domain", "GestorVestuario.Domain\GestorVestuario.Domain.csproj", "{BDCAEA19-3273-4E65-A774-A0F6AB851E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorVestuario.Infrastructure", "GestorVestuario.Infrastructure\GestorVestuario.Infrastructure.csproj", "{1EF462ED-E851-44C8-8D3C-482B9B3897CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDCAEA19-3273-4E65-A774-A0F6AB851E24} = {BDCAEA19-3273-4E65-A774-A0F6AB851E24}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7849EFBC-37E7-42E7-B946-811F02C869D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7849EFBC-37E7-42E7-B946-811F02C869D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7849EFBC-37E7-42E7-B946-811F02C869D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7849EFBC-37E7-42E7-B946-811F02C869D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE58F736-FD19-4F4A-8CEE-0C8BE75DA730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE58F736-FD19-4F4A-8CEE-0C8BE75DA730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE58F736-FD19-4F4A-8CEE-0C8BE75DA730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE58F736-FD19-4F4A-8CEE-0C8BE75DA730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDCAEA19-3273-4E65-A774-A0F6AB851E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCAEA19-3273-4E65-A774-A0F6AB851E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCAEA19-3273-4E65-A774-A0F6AB851E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCAEA19-3273-4E65-A774-A0F6AB851E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF462ED-E851-44C8-8D3C-482B9B3897CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF462ED-E851-44C8-8D3C-482B9B3897CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF462ED-E851-44C8-8D3C-482B9B3897CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF462ED-E851-44C8-8D3C-482B9B3897CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B0E9FBF-9D0E-4AAB-9092-1ACFFDAB7031}
+	EndGlobalSection
+EndGlobal
