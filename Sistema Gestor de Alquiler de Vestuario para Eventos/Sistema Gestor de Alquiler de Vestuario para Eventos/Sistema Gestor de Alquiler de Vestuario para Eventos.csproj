@@ -25,4 +25,8 @@
     <ProjectReference Include="..\GestorVestuario.Infrastructure\GestorVestuario.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

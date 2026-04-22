@@ -13,7 +13,6 @@ namespace GestorVestuario.Application.DTO
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
         public bool Devuelto { get; set; }
-        public decimal Penalidad { get; set; }
 
         public int ClienteId { get; set; }
 

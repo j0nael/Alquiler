@@ -14,6 +14,7 @@ namespace GestorVestuario.Infrastructure.Model
         public bool Disponible { get; set; }
         public decimal Precio { get; set; }
 
+        public string Foto { get; set; }
         public int CategoriaId { get; set; }
         public CategoriaModel Categoria { get; set; }
 

@@ -25,9 +25,7 @@ namespace GestorVestuario.Application.Validation
                 .WithMessage("La fecha de fin debe ser mayor que la fecha de inicio.");
 
             
-            RuleFor(a => a.Penalidad)
-                .GreaterThanOrEqualTo(0)
-                .WithMessage("La penalidad no puede ser negativa.");
+       
 
             
             RuleFor(a => a.ClienteId)

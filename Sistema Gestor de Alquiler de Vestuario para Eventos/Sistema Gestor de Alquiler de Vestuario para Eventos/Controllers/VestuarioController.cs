@@ -27,7 +27,11 @@ namespace GestorVestuario.API.Controllers
                 Id = v.Id,
                 Nombre = v.Nombre,
                 Talla = v.Talla,
-                CategoriaId = v.CategoriaId
+                CategoriaId = v.CategoriaId,
+                Disponible = v.Disponible,
+                Precio = v.Precio,
+                Foto = v.Foto
+
             }).ToList();
 
             return Ok(list);
@@ -43,8 +47,7 @@ namespace GestorVestuario.API.Controllers
                 CategoriaId = dto.CategoriaId,
                 Disponible = dto.Disponible,
                 Precio = dto.Precio,
-
-
+                Foto = dto.Foto
             };
 
             _context.Vestuarios.Add(entity);
@@ -52,21 +55,25 @@ namespace GestorVestuario.API.Controllers
 
             return Ok(dto);
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, VestuarioDto dto)
         {
             var entity = await _context.Vestuarios.FindAsync(id);
             if (entity == null)
                 return NotFound();
+
             entity.Nombre = dto.Nombre;
             entity.Talla = dto.Talla;
             entity.CategoriaId = dto.CategoriaId;
             entity.Disponible = dto.Disponible;
             entity.Precio = dto.Precio;
+            entity.Foto = dto.Foto;
+
             await _context.SaveChangesAsync();
-            return Ok(dto);
+
+            return Ok(entity);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var entity = await _context.Vestuarios.FindAsync(id);

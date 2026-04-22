@@ -68,6 +68,7 @@ namespace GestorVestuario.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, ClienteDto dto)
         {
+            dto.Id = id; 
             var entity = await _context.Clientes.FindAsync(id);
 
             if (entity == null)
@@ -76,7 +77,7 @@ namespace GestorVestuario.API.Controllers
             entity.Nombre = dto.Nombre;
             entity.Cedula = dto.Cedula;
 
-            _context.Clientes.Update(entity);
+            
             await _context.SaveChangesAsync();
 
             return NoContent();

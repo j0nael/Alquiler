@@ -43,10 +43,9 @@ namespace GestorVestuario.API.Controllers
             var result = data.Select(a => new
             {
                 a.Id,
-                Cliente = a.Cliente.Nombre,
-                Vestuario = a.Vestuario.Nombre,
-                Penalidad = a.Penalidad,
-                Estado = a.Devuelto ? "Devuelto" : "Activo",
+                a.ClienteId,
+                a.VestuarioId,                
+                a.Devuelto,
                 a.FechaInicio,
                 a.FechaFin
             });
@@ -55,7 +54,7 @@ namespace GestorVestuario.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(AlquilerDto dto)
+        public async Task<IActionResult> Create( AlquilerDto dto)
         {
             var vestuario = await _context.Vestuarios.FindAsync(dto.VestuarioId);
 
@@ -72,7 +71,7 @@ namespace GestorVestuario.API.Controllers
                 FechaInicio = dto.FechaInicio,
                 FechaFin = dto.FechaFin,
                 Devuelto = false,
-                Penalidad = 0
+                
             };
 
             
@@ -80,8 +79,8 @@ namespace GestorVestuario.API.Controllers
 
             _context.Alquileres.Add(entity);
             await _context.SaveChangesAsync();
-
-            return Ok();
+            return CreatedAtAction(nameof(GetById), new { id = entity.Id }, entity);
+          
         }
 
         [HttpPut("{id}")]
@@ -96,7 +95,7 @@ namespace GestorVestuario.API.Controllers
             entity.FechaInicio = dto.FechaInicio;
             entity.FechaFin = dto.FechaFin;
             entity.Devuelto = dto.Devuelto;
-            entity.Penalidad = dto.Penalidad;
+          
 
             await _context.SaveChangesAsync();
 

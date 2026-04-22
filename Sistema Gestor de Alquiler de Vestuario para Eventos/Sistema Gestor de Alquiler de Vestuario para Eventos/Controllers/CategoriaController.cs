@@ -44,7 +44,7 @@ namespace GestorVestuario.API.Controllers
 
             return Ok(dto);
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, CategoriaDTO dto)
         {
             var entity = await _context.Categorias.FindAsync(id);
@@ -54,7 +54,7 @@ namespace GestorVestuario.API.Controllers
             await _context.SaveChangesAsync();
             return Ok(dto);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var entity = await _context.Categorias.FindAsync(id);
