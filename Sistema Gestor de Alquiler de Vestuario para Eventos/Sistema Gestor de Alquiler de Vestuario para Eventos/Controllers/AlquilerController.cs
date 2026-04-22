@@ -80,7 +80,7 @@ namespace GestorVestuario.API.Controllers
             _context.Alquileres.Add(entity);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetById), new { id = entity.Id }, entity);
-          
+
         }
 
         [HttpPut("{id}")]
